@@ -1,0 +1,7 @@
+.logoTickerGradient::before {
+  background: linear-gradient(to right, #000, rgb(0, 0, 0, 0));
+}
+
+.logoTickerGradient::after {
+  background: linear-gradient(to left, #000, rgb(0, 0, 0, 0));
+}
