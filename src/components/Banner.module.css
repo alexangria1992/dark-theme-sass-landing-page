@@ -1,0 +1,10 @@
+.bannerHeader {
+  background: linear-gradient(
+    to right,
+    #fcd6ff,
+    #29d8ff,
+    #fffd80,
+    #f89abf,
+    #fcd6ff
+  );
+}
