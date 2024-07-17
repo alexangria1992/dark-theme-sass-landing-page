@@ -1,0 +1,20 @@
+.heroBackground {
+  background: linear-gradient(to bottom, #000, #200d42, #4f21a1, #a46edb);
+}
+
+.spanGradient {
+  background: linear-gradient(
+    to right,
+    #f87aff,
+    #fb93d0,
+    #ffdd99,
+    #c3f0b2,
+    #2fd8fe
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ovalDesign {
+  background: radial-gradient(closest-side, #000 82%, #9560eb);
+}
