@@ -1,0 +1,21 @@
+.bannerHeader {
+  background: linear-gradient(
+    to right,
+    #fcd6ff,
+    #29d8ff,
+    #fffd80,
+    #f89abf,
+    #fcd6ff
+  );
+}
+
+.logoBackground {
+  background: linear-gradient(
+    to right,
+    #f87bff,
+    #fb92cf,
+    #ffdd98,
+    #c2f0b1,
+    #2fd8fe
+  );
+}
