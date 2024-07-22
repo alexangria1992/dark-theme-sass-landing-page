@@ -8,6 +8,8 @@ import pulseLogo from '../assets/images/pulse.png';
 import apexLogo from '../assets/images/apex.png';
 import Image from 'next/image';
 import styles from './LogoTicker.module.css';
+import { motion } from 'framer-motion';
+
 const images = [
   { src: acmeLogo, alt: 'Acme Logo' },
   { src: quantumLogo, alt: 'Quantum Logo' },
@@ -25,14 +27,36 @@ export const LogoTicker = () => {
           Trusted by the world's most innovative teams
         </h2>
         <div
-          className={`overflow-hidden mt-9 before:content-[''] before:absolute before:h-full after:h-full before:w-5 after:w-5 after:absolute after:content-[''] relative 
+          className={`flex overflow-hidden mt-9 before:z-10 before:content-[''] before:absolute before:h-full after:h-full before:w-5 after:w-5 after:absolute after:content-[''] relative 
           after:right-0 before:left-0 before:top-0 after:top-0 ${styles.logoTickerGradient}`}
         >
-          <div className='flex gap-16'>
+          <motion.div
+            transition={{
+              duration: 10,
+              ease: 'linear',
+              repeat: Infinity,
+            }}
+            initial={{ translateX: 0 }}
+            animate={{ translateX: '-50%' }}
+            className='flex gap-16 flex-none pr-16 '
+          >
             {images.map(({ src, alt }) => (
-              <Image src={src} alt={alt} className='flex-none h-8 w-auto' />
+              <Image
+                key={alt}
+                src={src}
+                alt={alt}
+                className='flex-none h-8 w-auto'
+              />
             ))}
-          </div>
+            {images.map(({ src, alt }) => (
+              <Image
+                key={alt}
+                src={src}
+                alt={alt}
+                className='flex-none h-8 w-auto'
+              />
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>
